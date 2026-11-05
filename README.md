@@ -13,7 +13,7 @@ pnpm dev:mock     # Spring 없이 목업으로 화면 보기
 - 학생 입장: http://localhost:3000/join (목업 수업 코드 `NYW7D6`)
 - 선생님 화면: http://localhost:3000/instructor (목업 계정 `instructor` / `instructor`)
 
-실제 서버에 연결하려면 Spring을 8080에 띄우고 다음을 실행합니다. `/api`, `/l` 요청은 `API_TARGET`(기본 `http://localhost:8080`)으로 넘어갑니다.
+실제 서버에 연결하려면 Spring을 8080에 띄우고 다음을 실행합니다. `/api`, `/l` 요청은 `API_TARGET`(기본 `http://localhost:8080`)으로 넘어갑니다. 주소를 바꾸려면 `.env.example`을 `.env.local`로 복사해 고칩니다.
 
 ```bash
 pnpm dev
@@ -26,6 +26,8 @@ pnpm typecheck
 pnpm lint
 pnpm build        # 정적 파일이 out/에 만들어진다
 ```
+
+`main` 푸시와 PR마다 GitHub Actions가 같은 검사를 실행합니다(`.github/workflows/ci.yml`). Node 버전은 `.nvmrc`를 따릅니다.
 
 ## 화면
 
