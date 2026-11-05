@@ -24,5 +24,8 @@
     "typescript": "^5",
     "cross-env": "^10.1.0"
   },
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "packageManager": "pnpm@12.16.1"
 }
