@@ -7,7 +7,7 @@
     "dev:mock": "concurrently -k -n mock,next \"node mock/server.mjs\" \"cross-env API_TARGET=http://localhost:8081 next dev\"",
     "build": "next build",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "next": "16.4.5",
